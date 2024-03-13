@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Foodichef</title>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #343a40;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ffb6c1; /* Baby pink border */
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffb6c1; /* Baby pink background */
+            color: #343a40; /* Text color */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #ff69b4; /* Lighter pink on hover */
+        }
+
+        #loginMessage {
+            text-align: center;
+            margin-top: 10px;
+            color: green; /* Color for successful login message */
+            display: none; /* Hide the message by default */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Foodichef</h1>
+        <form method="post" action="./food.html">
+            <label for="Username">Username</label>
+            <input type="text" id="Username" name="Username" placeholder="Enter Username" required>
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password" placeholder="Password" required>
+            <button type="submit" onclick="showMessage()">Login</button>
+            <p id="loginMessage">Successful Login</p>
+        </form>
+    </div>
+
+    <script>
+    function showMessage() {
+        document.getElementById('loginMessage').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('loginForm').submit();
+        }, 3000);// Adjust the delay (in milliseconds) as needed
+    }
+    </script>
+</body>
+</html>

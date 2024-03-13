@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Recipe Form</title>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light gray background */
+            color: #333; /* Dark gray text color */
+        }
+
+        .navbar {
+            background-color: #FF69B4; /* Pinkish color */
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #fff; /* White text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #FF1493; /* Lighter pink on hover */
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333; /* Dark gray */
+        }
+
+        input[type="text"],
+        input[type="file"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button[type="submit"] {
+            background-color: #FF69B4; /* Pinkish color */
+            color: #fff; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #FF1493; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#">About</a>
+    <a href="#">All Recipes</a>
+    <a href="#">Gluten-free</a>
+    <a href="#">Vegan</a>
+    <a href="addrecipe.html">Add Recipe</a>
+</div>
+
+<div class="form-container">
+    <h2>Add a New Recipe</h2>
+
+    <form action="./submit-recipe" method="POST">
+        <div class="form-group">
+            <label for="dishName">Dish Name:</label>
+            <input type="text" id="dishName" name="dishName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="procedure">Procedure:</label>
+            <textarea id="procedure" name="procedure" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="timeDuration">Time Duration (minutes):</label>
+            <input type="number" id="timeDuration" name="timeDuration" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Recipe Image:</label>
+            <input type="text" id="image" name="image">
+        </div>
+
+        <button type="submit">Submit Recipe</button>
+    </form>
+</div>
+
+</body>
+</html>

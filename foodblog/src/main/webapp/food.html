@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog</title>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light gray background */
+            color: #333; /* Dark gray text color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background-color: #FF69B4; /* Pinkish color */
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #fff; /* White text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #FF1493; /* Lighter pink on hover */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333; /* Dark gray */
+        }
+
+        .card-container {
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #FF69B4; /* Pinkish color */
+            color: #fff; /* White text color */
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+
+        .scroll-button:hover {
+            background-color: #FF1493; /* Lighter pink on hover */
+        }
+        .scroll-button.right {
+            right: 0;
+        }
+
+        .card {
+            display: inline-block;
+            background-color: #FFC0CB; /* Light pink background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            max-width: calc(100% / 5 - 20px); /* Adjust the card size and spacing */
+            vertical-align: top;
+            transition: transform 0.3s ease;
+        }
+
+        .card:last-child {
+            margin-right: 0;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .card img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333; /* Dark gray */
+        }
+
+        .card-description {
+            color: #000; /* Black color */
+            margin-bottom: 10px;
+        }
+
+        .star-rating {
+            display: flex;
+            align-items: center;
+            color: #FFD700; /* Golden star color */
+            margin-bottom: 5px;
+        }
+
+        .star-rating::before {
+            content: "\2605"; /* Star symbol */
+            margin-right: 5px;
+        }
+
+        /* Color Palette */
+        .primary-color {
+            color: #FF69B4; /* Pinkish color */
+        }
+
+        .accent-color {
+            color: #000; /* Black color */
+        }
+
+        .bg-color {
+            background-color: #F4E1D2; /* Light peach background */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">All Recipes</a>
+        <a href="#">Gluten-free</a>
+        <a href="#">Vegan</a>
+        <a href="addrecipe.html">Add Reciep</a>
+    </div>
+
+    <div class="container">
+        <h1>Delicious Food Dishes</h1>
+
+        <!-- Top Searched Dishes -->
+        <div class="card-container">
+            <button class="scroll-button" onclick="scrollCards(-10)">←</button>
+            <div class="card">
+                <img src="https://pinchofyum.com/wp-content/uploads/Broccoli-Cheese-Soup-2-225x225.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">213 reviews</span></div>
+                </div>
+            </div>
+            <!-- Add more card elements as needed -->
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Chicken-Tortilla-Soup-2-225x225.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">83 reviews</span></div>
+                </div>
+                <!-- Card 2 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Homemade-Tomato-Soup-Square-225x225.png" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">235 reviews</span></div>
+                </div>
+                <!-- Card 3 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Country-Chicken-Stew-2-225x225.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">243 reviews</span></div>
+                </div>
+                <!-- Card 4 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Sunday-Chili-400x400.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">133 reviews</span></div>
+                </div>
+                <!-- Card 5 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Creamy-Tortellini-Soup-400x400.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">231 reviews</span></div>
+                </div>
+                <!-- Card 6 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Coconut-Curry-Ramen-3-400x400.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">113 reviews</span></div>
+                </div>
+                <!-- Card 7 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Tortilla-Soup-400x400.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">233 reviews</span></div>
+                </div>
+                <!-- Card 8 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Chicken-Pot-Pie-Soup-1-4-400x400.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">213 reviews</span></div>
+                </div>
+                <!-- Card 9 Content -->
+            </div>
+
+            <div class="card">
+            <img src="https://pinchofyum.com/wp-content/uploads/Gumbo-1-2-400x400.jpg" alt="Top Searched Dish">
+                <div class="card-content">
+                    <h2 class="card-title primary-color">Top Searched Dish 1</h2>
+                    <p class="card-description">Dish 1</p>
+                    <div class="star-rating">★★★★☆ <span class="accent-color">100 reviews</span></div>
+                </div>
+                <!-- Card 10 Content -->
+                
+            </div>
+        </div>
+                    <button class="scroll-button" onclick="scrollCards(-10)">←</button>
+        
+    </div>
+
+    <script>
+        function scrollCards(scrollAmount) {
+            const container = document.querySelector('.card-container');
+            container.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
